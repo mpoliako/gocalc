@@ -1,7 +1,7 @@
 # Golang Calculator
 To install:
 
-go get src/github.com/mpoliako/calculator
+go get go get github.com/mpoliako/gocalc
 
 example of usage:
 
