@@ -37,7 +37,7 @@ func NewOp(op string) func(a int, b int) int {
 	}
 }
 
-func Calculate(expr string) int {
+func Calculate(expr string) float64 {
 	// remove spaces
 	expr = strings.Replace(expr, " ", "", -1)
 	// build tree
@@ -46,9 +46,9 @@ func Calculate(expr string) int {
 	return calculate(opTree)
 }
 
-func calculate(tree *opTree) int {
+func calculate(tree *opTree) float64 {
 	if tree.typ == leaf {
-		ret, err := strconv.Atoi(tree.value)
+		ret, err := strconv.ParseFloat(tree.value, 64)
 		if err != nil {
 			panic(err)
 		} else {

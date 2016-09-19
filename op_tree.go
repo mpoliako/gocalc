@@ -18,7 +18,12 @@ type opTree struct {
 	typ    int
 }
 
+var (
+	bracketMap map[string]string
+)
+
 func buildTree(expr string) *opTree {
+
 	rootNode := &opTree{
 		parent: nil,
 		left:   nil,
