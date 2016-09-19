@@ -14,22 +14,22 @@ const (
 	DIVIDE   = "/"
 )
 
-func NewOp(op string) func(a int, b int) int {
+func NewOp(op string) func(a int, b int) float64 {
 	switch op {
 	case PLUS:
-		return func(a int, b int) int {
+		return func(a int, b int) float64 {
 			return a + b
 		}
 	case MINUS:
-		return func(a int, b int) int {
+		return func(a int, b int) float64 {
 			return a - b
 		}
 	case MULTIPLY:
-		return func(a int, b int) int {
+		return func(a int, b int) float64 {
 			return a * b
 		}
 	case DIVIDE:
-		return func(a int, b int) int {
+		return func(a int, b int) float64 {
 			return a / b
 		}
 	default:
